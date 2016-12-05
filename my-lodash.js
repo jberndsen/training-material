@@ -29,4 +29,4 @@ console.log(fluffyName);
 
 var someBunny = _.find(animals, x => x.species === 'rabbit');
 
-console.log(someBunny)
+console.log(someBunny);
