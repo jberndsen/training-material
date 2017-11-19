@@ -1,10 +1,14 @@
-let numbers = [10,5,21,7];
+let numbers = [1, 5, 10];
 
-Array.prototype.mySort = function() {
+Array.prototype.numericSort = function() {
     if (this.length === 0) return [];
-    let [curr, ...xs] = this;
 
-    return [...xs.filter(x => x < curr).mySort(), curr, ...xs.filter(x => x >= curr).mySort()];
+    let [first, ...rest] = this;
+
+    return [...rest.filter(x => x < first).numericSort(),
+            first, 
+            ...rest.filter(x => x >= first).numericSort()];
 }
 
-console.log(numbers.mySort());
+let sorted = numbers.numericSort();
+console.log(sorted);

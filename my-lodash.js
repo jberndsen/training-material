@@ -19,7 +19,7 @@ var animals = [
     {name: 'Clooney', species: 'rabbit'},
     {name: 'Blub', species: 'fish'},
     {name: 'Captain smartpants', species: 'Parrot'}
-]
+];
 
 var fluffyName = _.find(animals, function(animal) {
     return animal.name.startsWith('Fluffy');
@@ -28,5 +28,7 @@ var fluffyName = _.find(animals, function(animal) {
 console.log(fluffyName);
 
 var someBunny = _.find(animals, x => x.species === 'rabbit');
+
+var someBunny = _.find(animals, function(x) { return x.species === 'rabbit'; });
 
 console.log(someBunny);
